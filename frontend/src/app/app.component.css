@@ -1,0 +1,84 @@
+body {
+  background-color: #f0f6ff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 255, 0.1);
+  border: 2px solid #007bff;
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}
+
+.join-section,
+.send-section {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #007bff;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background-color: #f9fcff;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* My messages (right) */
+.message.me {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+/* Others' messages (left) */
+.message.other {
+  background-color: #e3f2ff;
+  color: #004a99;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
