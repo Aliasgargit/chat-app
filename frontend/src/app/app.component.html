@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Chat Room</h1>
+
+  <!-- Join Room -->
+  <div *ngIf="!joined" class="join-section">
+    <input
+      type="text"
+      [(ngModel)]="roomId"
+      placeholder="Enter Room ID"
+    />
+    <button (click)="joinRoom()">Join Room</button>
+  </div>
+
+  <!-- Chat Room -->
+  <div *ngIf="joined" class="chat-box">
+    <div class="messages">
+      <div
+        *ngFor="let msg of messages"
+        class="message"
+        [ngClass]="msg.sender"
+      >
+        {{ msg.text }}
+      </div>
+    </div>
+
+    <div class="send-section">
+      <input
+        type="text"
+        [(ngModel)]="messageInput"
+        placeholder="Type a message..."
+        (keyup.enter)="sendMessage()"
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
